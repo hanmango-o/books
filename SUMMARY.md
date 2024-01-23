@@ -2,15 +2,31 @@
 
 * [👋 Intro](README.md)
 
-## About us
+## Computer Science <a href="#cs" id="cs"></a>
 
-* [🚀 Vision, Mission & Focus](about-us/vision-mission-and-focus/README.md)
-  * [Vision](about-us/vision-mission-and-focus/vision.md)
-  * [Mission](about-us/vision-mission-and-focus/mission.md)
-  * [Focus](about-us/vision-mission-and-focus/focus.md)
-* [💖 Values](about-us/values.md)
+* [HTTP](cs/http.md)
 
-## Collaborating
+## Language
 
-* [🤝 How we Work Together](collaborating/how-we-work-together.md)
-* [📅 Meetings](collaborating/meetings.md)
+* [C++](language/c++.md)
+* [Javascript](language/js.md)
+* [Java](language/java.md)
+
+## Algorithm
+
+* [Data Structure](algorithm/data-structure.md)
+* [Skills](algorithm/skills/README.md)
+  * [DAT(Direct Addressing Table)](algorithm/skills/dat.md)
+  * [Recursion](algorithm/skills/recursion.md)
+
+## Web
+
+* [HTML & CSS](web/html-css.md)
+
+## Mobile
+
+* [Flutter](mobile/flutter.md)
+
+## Others
+
+* [Page 6](others/page-6.md)
