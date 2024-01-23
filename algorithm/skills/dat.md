@@ -1,5 +1,6 @@
 ---
 description: DAT(Direct Addressing Table)에 대해 알아보고, 이를 활용하여 알고리즘 문제에 적용합니다.
+coverY: 0
 ---
 
 # DAT(Direct Addressing Table)
