@@ -17,6 +17,7 @@
 * [Data Structure](algorithm/data-structure.md)
 * [Skills](algorithm/skills/README.md)
   * [DAT(Direct Addressing Table)](algorithm/skills/dat.md)
+  * [Dx Dy](algorithm/skills/dx-dy.md)
   * [Recursion](algorithm/skills/recursion.md)
 
 ## Web
