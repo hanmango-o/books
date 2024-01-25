@@ -157,11 +157,11 @@ HTTP 통신은 비연결성과 무상태 특징을 가집니다. 이에 통신�
 
 ***
 
-* HTTP 는 **Server-Client 구조의 데이터 요청** 시 사용하는 TCP/IP 기반의 프로토콜이다.
-* HTTP 의 특징은 **요청-응답 구조**, **비연결성**, **무상태**이다.
-* HTTP 요청에는 Version, HTTP Method, URL, Header, Body 가 포함된다.
-* HTTP 응답에는 Status Code, Header, Body 가 포함된다.
-* HTTP Method는 요청 시 사용하며, 어떤 요청인지 알려주는 역할을 한다.
-  * 대표적으로 **GET, PUT, DELETE, UPDATE, PATCH** 가 있다.
-* Status Code 는 응답 시, 해당 요청이 어떻게 처리되었는지 알려주는 역할을 한다.
-  * 대표적으로 **2xx, 4xx, 5xx** 가 있다.
+* HTTP 는 **Server-Client 구조의 데이터 요청** 시 사용하는 TCP/IP 기반의 프로토콜입니다.
+* HTTP 의 특징은 **요청-응답 구조**, **비연결성**, **무상태**입니다.
+* HTTP 요청에는 Version, HTTP Method, URL, Header, Body 가 포함됩니다.
+* HTTP 응답에는 Status Code, Header, Body 가 포함됩니다.
+* HTTP Method는 요청 시 사용하며, 어떤 요청인지 알려주는 역할을 합니다.
+  * 대표적으로 **GET, PUT, DELETE, UPDATE, PATCH** 가 있습니다.
+* Status Code 는 응답 시, 해당 요청이 어떻게 처리되었는지 알려주는 역할을 합니다.
+  * 대표적으로 **2xx, 4xx, 5xx** 가 있습니다.
