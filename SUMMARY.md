@@ -19,7 +19,7 @@
     * [string](language/c-c++/stl/string.md)
     * [math.h](language/c-c++/stl/math.h.md)
     * [algorithm](language/c-c++/stl/algorithm.md)
-    * [limits](language/c-c++/stl/limits.md)
+    * [limits.h](language/c-c++/stl/limits.h.md)
   * [Etc.](language/c-c++/etc..md)
 * [Javascript](language/js/README.md)
   * [Data Type](language/js/data-type.md)
