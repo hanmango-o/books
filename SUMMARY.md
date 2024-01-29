@@ -37,6 +37,8 @@
   * [Dx Dy](algorithm/skills/dx-dy.md)
   * [Recursion](algorithm/skills/recursion.md)
   * [String](algorithm/skills/string.md)
+  * [Backtracking](algorithm/skills/backtracking.md)
+  * [DFS](algorithm/skills/dfs.md)
 
 ## Web
 
