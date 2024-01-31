@@ -5,7 +5,7 @@
 ## Computer Science <a href="#cs" id="cs"></a>
 
 * [Network](cs/network/README.md)
-  * [HTTP](cs/network/http.md)
+  * [HTTP](cs/http.md)
 
 ## Language
 
