@@ -65,6 +65,9 @@ log10(10); // 상용로그, 1
 ```cpp
 abs(-10) // 절대값, 10
 abs(-10.2) // 10.2
+
+labs(1000000000000000) // long 타입 절대값
+fabs(20.22) // double, float 타입 절대값
 ```
 
 ### 주의할 점
@@ -85,5 +88,5 @@ abs(-10.2) // 10.2
 
 * 주요 기능은 아래와 같습니다.
 
-<table><thead><tr><th width="153">Function</th><th width="151">Used</th><th>Result</th></tr></thead><tbody><tr><td>올림</td><td>ceil(value)</td><td>value의 소수점 첫째 자리 올림</td></tr><tr><td>내림</td><td>floor(value)</td><td>value의 소수점 첫째 자리 내림</td></tr><tr><td>반올림</td><td>round(value)</td><td>value의 소수점 첫째 자리 반올림</td></tr><tr><td>제곱</td><td>pow(a, b)</td><td><span class="math">a^b</span></td></tr><tr><td>제곱근(루트)</td><td>sqrt(value)</td><td><span class="math">\sqrt{value}</span></td></tr><tr><td>로그</td><td>log(value)  log10(value)</td><td><span class="math">\log_e value</span> <span class="math">\log value</span></td></tr><tr><td>절대값</td><td>abs(value)</td><td><span class="math">|value|</span></td></tr></tbody></table>
+<table><thead><tr><th width="153">Function</th><th width="151">Used</th><th>Result</th></tr></thead><tbody><tr><td>올림</td><td>ceil(value)</td><td>value의 소수점 첫째 자리 올림</td></tr><tr><td>내림</td><td>floor(value)</td><td>value의 소수점 첫째 자리 내림</td></tr><tr><td>반올림</td><td>round(value)</td><td>value의 소수점 첫째 자리 반올림</td></tr><tr><td>제곱</td><td>pow(a, b)</td><td><span class="math">a^b</span></td></tr><tr><td>제곱근(루트)</td><td>sqrt(value)</td><td><span class="math">\sqrt{value}</span></td></tr><tr><td>로그</td><td>log(value)  log10(value)</td><td><span class="math">\log_e value</span> <span class="math">\log value</span></td></tr><tr><td>절대값</td><td>abs(value)<br>labs(value)<br>fabs(value)</td><td><span class="math">|value|</span></td></tr></tbody></table>
 
