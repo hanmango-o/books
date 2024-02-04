@@ -39,6 +39,13 @@
   * [String](algorithm/skills/string.md)
   * [Backtracking](algorithm/skills/backtracking.md)
   * [DFS](algorithm/skills/dfs.md)
+  * [BFS](algorithm/skills/bfs.md)
+  * [Sort](algorithm/skills/sort.md)
+  * [Priority queue](algorithm/skills/priority-queue.md)
+  * [Flood Fill](algorithm/skills/flood-fill.md)
+  * [Greedy](algorithm/skills/greedy.md)
+  * [Dijkstra](algorithm/skills/dijkstra.md)
+  * [DP](algorithm/skills/dp.md)
 
 ## Web
 
