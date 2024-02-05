@@ -1,2 +1,49 @@
+---
+description: Depth First Search 에 대해 알아보고, 이를 활용하여 문제를 해결하는 방법을 살펴봅니다.
+---
+
 # DFS
 
+## DFS 란?
+
+***
+
+DFS 는 깊이 우선 탐색으로 특정 노드에서 방문 가능한 모든 노드를 깊이 우선으로 탐색하는 완전 탐색 기법입니다.
+
+### DFS 구조
+
+DFS는 Stack 자료구조나 재귀를 통하여 구현이 가능합니다. 보통의 경우 재귀를 통해 구현합니다.
+
+아래는 재귀를 통해 DFS 를 구현하는 예시입니다.
+
+```cpp
+void DFS(int level) {
+    // [1] Base case
+    if(level == N) {
+        // Some Base logic
+        return;
+    }
+    
+    for(int i = 0; i < vect.size(); i++) {
+        // [2] Recursive case
+        // Some Recursive logic
+        DFS(level + 1); // depth + 1
+    }
+}
+```
+
+문제에 따라 구조는 다양하게 변경될 수 있으나, 기본적으로 깊이 우선 탐색을 위한 재귀문의 구조와 동일합니다.
+
+#### \[1] Base case
+
+DFS 탐색을 종료하고 싶은 조건문에 해당합니다. 각 문제 상황에 맞게 재귀 종료문에 해당합니다.
+
+#### \[2] Recursive case
+
+다음 Depth 로 나아가는 재귀 조건문에 해당합니다. 해당 조건에  따라 다음 레벨로 진행하게 됩니다.
+
+### 조건에 따른 탐색
+
+DFS는 전위탐색, 후위탐색, 중위탐색에 따라 아래와 같이 구조를 잡을 수 있습니다.
+
+#### 전위탐색(Pre
