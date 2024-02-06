@@ -183,10 +183,35 @@ void BFS() {
             int now = q.front();
             q.pop();
             
-            // Some code for searching next node;
+            // Some code for searching next node
         }
     }
 }
 ```
 
-#### \[1]&#x20;
+#### \[1\~2] 조건 Queue 관리
+
+조건에 해당하는 Queue를 별도로 생성하고 앞선 depth 에 따른 관리와 같이 동작되게 합니다.
+
+해당 과정에서 조건 Queue는 보통의 경우 이미 어떤 조건이 이에 해당하는 지 알 수 있다고 가정합니다.
+
+{% hint style="info" %}
+중요한 것은 조건 Queue 는 실제 동작 Queue 보다 먼저 동작해야 한다는 것 입니다.
+
+물론 문제 조건에 따라 이는 달라질 수 있습니다.
+{% endhint %}
+
+#### \[3\~4] 동작 Queue 관리
+
+앞선 [#depth](bfs.md#depth "mention")와 동일하게 동작 Queue를 관리합니다.
+
+
+
+## Summary
+
+***
+
+* BFS 는 너비 우선 탐색으로 그래프/트리, 지도 탐색에서 주로 사용하며 Queue 자료 구조를 사용합니다.
+* BFS 탐색은DAT, Backtracking, dy dx 등 다양한 테크닉과 함께 사용될 수 있습니다.
+* 기본적은 BFS 탐색은 동일 Depth 에 대한 제어가 불가능하기에, Queue의 size와 2중 while문을 통해 이를 제어할 수 있습니다.
+* 여러 조건에 따라 동시에 진행되는 경우 Queue를 여러  개 사용하여 관리해야 하는 요소를 동시에 제어할 수 있습니다.
