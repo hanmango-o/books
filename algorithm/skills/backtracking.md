@@ -1,5 +1,5 @@
 ---
-description: Backtracking 을 활용한 Prefix SUM 과 PATH 기법, 그리고 순열과 조합에 대해 알아봅니다.
+description: Backtracking 을 활용한 SUM 과 PATH 기법, 그리고 순열과 조합에 대해 알아봅니다.
 ---
 
 # Backtracking
@@ -10,7 +10,7 @@ description: Backtracking 을 활용한 Prefix SUM 과 PATH 기법, 그리고 �
 
 백트랙킹이란 왔던 경로(PATH)를 활용하여 문제를 해결하는 기법을 의미합니다.
 
-보통의 경우 재귀 함수와 함께 사용하며 전역 변수(PATH) 를 활용하여 재귀적 동작 과정을 기록하고 이를 활용하는 방법입니다.
+보통의 경우 재귀 함수와 함께 사용하며 전역 변수(PATH) 를 활용하여 재귀적 동작 과정을 기록하고 이를 활용하는 방법입니다. 이러한 일련의 과정을 가지치기라고 합니다.
 
 ### 왜 사용할까?
 
