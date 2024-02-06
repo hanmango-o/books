@@ -123,31 +123,70 @@ BFS 탐색은 Queue 자료구조를 사용하기에 자동으로 depth가 낮은
 
 하지만 이러한 Queue의 특징 때문에 **Queue에 있는 요소들의 depth가 동일하지 않다**는 문제가 발생하게 됩니다. 인접한 노드를 만나면 다음 탐색을 위해 무조건 push 해야 하고, 이러한 push 타이밍을 제어할 수 없으므로 현재 Queue에 어느 정도의 depth를 가진 노드가 동시에 들어있는지 확인이 어렵다는 문제점이 생깁니다.
 
-이러한 문제는 동일 depth에 해당하는 통해 해결할 수 있습니다.
+이러한 문제는 2중 while 문과 큐의 크기를 통해 해결할 수 있습니다.
 
 ```cpp
 void BFS() {
     queue<int> q;
+    int size_q; // [1] 현재 depth의 노드들의 개수를 저장
+    
     q.push(1);
     
     while(!q.empty()) {
-        int now = q.front();
-        q.pop();
-        
-        for(int i = 0; i < graph[now].size(); i++) {
-            q.push(graph[now][i]);
+        size_q = q.size(); // [2] 현재 depth의 노드 개수
+        while(size_q--) { // [3] 현재 depth의 모든 노드를 탐색
+            int now = q.front();
+            q.pop();
+            
+            for(int i = 0; i < graph[now].size(); i++) {
+                q.push(graph[now][i]);
+            }
         }
-        
-        size_t q_size = q.size();
-        
-        while(q_size--) {
-            // Same depth valid
+        // [4] 현재 depth 종료
+        // Some code after searching all nodes at the current depth
+    }
+}
+```
+
+#### \[1\~3] Queue의 size() 활용
+
+기존 BFS 에서는 하나의 노드를 방문할 때마다 Queue에 인접 노드를 삽입하고 한번의 pop 이 발생하기 때문에 몇개의 인접 노드가 있는지 확인이 어려웠습니다.
+
+하지만, Queue의 사이즈를 기록하고 해당 사이즈 만큼 반복문을 통해 pop 을 수행하여 인접 노드를 모두  탐색하도록 하면 문제를 해결할 수 있습니다. 위와 같이 2중 반복문을 사용한다면 현재 Queue에는 동일한 Depth를 가진 노드만 유지되며 동작하게 됩니다.
+
+#### \[4] depth 종료 이후 조건 처리
+
+2중 while 문의 종료 시점은 그래프에서 동일 depth 의 노드를 모두 탐색 완료한 시점입니다. 해당 부분에서 추가적인 로직 처리가 가능합니다.
+
+### 시간(Depth)에 따른 조건 변화 제어하기
+
+문제에 추가적인 조건이 있고, 시간 변화에 따라 조건도 변화한다면 어떻게 해야 할까요?
+
+위에서 사용한 depth 처리와 함께 조건 변화를 제어할 다른 Queue를 사용하여 문제를 해결할 수 있습니다.
+
+```cpp
+void BFS() {
+    queue<int> q, cond_q; // 조건 Queue 는 이미 값이 들어 있어야 함
+    int size_q;
+    q.push(1);
+    
+    while(!q.empty()) {
+        size_q = cond_q.size(); // [1] 현재 시간의 조건 큐 크기
+        while(size_q--) { // [2] 동일 depth의 조건 제어
+            int cond_now = cond_q.front();
+            cond_q.pop();
+            
+            // Some code for searching another condition
+        }
+        size_q = q.size(); // [3] 현재 depth의 노드 크기
+        while(size_q--) { // [4] 동일 depth의 노드 탐색
+            int now = q.front();
+            q.pop();
+            
+            // Some code for searching next node;
         }
     }
 }
 ```
 
-
-
-### 시간(Depth)에 따른 조건 변화 제어하기
-
+#### \[1]&#x20;
