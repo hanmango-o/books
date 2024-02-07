@@ -288,7 +288,7 @@ N 개의 숫자들만 사용하여 각각의 연산을 통해 만들 수 있는 
 
 ```cpp
 // 숫자 K 구하기(K 는 A, B 로 최소 공배수를 만들 수 있는 숫자)
-priority_queue<int> pq;
+priority_queue<int, vector<int>, greater<int>> pq;
 int vect[M];
 
 pq.push(1); // 최소 K는 1이라 가정
@@ -303,6 +303,10 @@ for(int i = 0; i < M; i++) { // M 은 구하고자 하는 K 개수
 ```
 
 위 문제에서는 나올 수 있는 모든 조합의 K 가 크기 순서대로 우선 순위 큐에 들어가게 됩니다. 이와 같이 순서를 가지는 K 조합을 구할 수 있습니다.
+
+{% hint style="info" %}
+우선 순위 큐의 특징으로 인해 나올 수 있는 K 가 작은 순서대로 vect 배열에 할당되는 것이 보장됩니다.
+{% endhint %}
 
 ## Summary
 
