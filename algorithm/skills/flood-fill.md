@@ -1,7 +1,3 @@
----
-description: Flood Fill 알고리즘에 대해 알아보고, 이를 활용한 문제 해결 방법을 살펴봅니다.
----
-
 # Flood Fill
 
 ## Flood Fill 이란?
