@@ -66,3 +66,7 @@
 ## DATABASE <a href="#db" id="db"></a>
 
 * [MySQL](db/mysql.md)
+
+## EMBEDED
+
+* [Page 1](embeded/page-1.md)
