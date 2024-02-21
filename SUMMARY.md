@@ -31,7 +31,8 @@
 
 ## Algorithm
 
-* [Data Structure](algorithm/data-structure.md)
+* [Data Structure](algorithm/data-structure/README.md)
+  * [Union Find](algorithm/data-structure/union-find.md)
 * [Skills](algorithm/skills/README.md)
   * [DAT(Direct Addressing Table)](algorithm/skills/dat.md)
   * [Dx Dy](algorithm/skills/dx-dy.md)
