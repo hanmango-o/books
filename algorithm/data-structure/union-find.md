@@ -257,6 +257,18 @@ void isCycle() {
 }
 ```
 
-### 순환하지 않는 경로 선택
+{% hint style="info" %}
+이를 통해 특정 노드(영역)이 연결되어 있는지, 또는 연결할 수 있는  지를 확인할 수 있습니다.
 
-앞선 [#cycle](union-find.md#cycle "mention")를 응용하여 무방향 그래프에서 순환하지 않는 경로가 존재하는 지
+
+
+\[Problem]\
+\-  [https://www.acmicpc.net/problem/17472](https://www.acmicpc.net/problem/17472)
+{% endhint %}
+
+### 영역의 개수
+
+1차원 또는 2차원 배열에서 값이 들어있는 연속된 부분(이하 영역)의 개수를 확인하기 위해서 Union Find를 사용할 수 있습니다.
+
+특히 섬을 채우는 문제에서 주로 사용됩니다.
+

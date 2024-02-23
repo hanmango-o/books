@@ -33,6 +33,8 @@
 
 * [Data Structure](algorithm/data-structure/README.md)
   * [Union Find](algorithm/data-structure/union-find.md)
+  * [Minimum Spanning Tree(MST)](algorithm/data-structure/minimum-spanning-tree-mst.md)
+  * [Heap](algorithm/data-structure/heap.md)
 * [Skills](algorithm/skills/README.md)
   * [DAT(Direct Addressing Table)](algorithm/skills/dat.md)
   * [Dx Dy](algorithm/skills/dx-dy.md)
@@ -47,6 +49,9 @@
   * [Greedy](algorithm/skills/greedy.md)
   * [Dijkstra](algorithm/skills/dijkstra.md)
   * [DP](algorithm/skills/dp.md)
+  * [Two Pointer](algorithm/skills/two-pointer.md)
+  * [Binary Search](algorithm/skills/binary-search.md)
+  * [Kruskal](algorithm/skills/kruskal.md)
 
 ## Web
 
