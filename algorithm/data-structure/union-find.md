@@ -264,14 +264,11 @@ void isCycle() {
 }
 ```
 
-{% hint style="info" %}
 이를 통해 특정 노드(영역)이 연결되어 있는지, 또는 연결할 수 있는  지를 확인할 수 있습니다.
 
-
-
-\[Problem]\
-\-  [https://www.acmicpc.net/problem/17472](https://www.acmicpc.net/problem/17472)
-{% endhint %}
+{% embed url="https://www.acmicpc.net/problem/17472" %}
+특정 노드(영역) 연결 여부 판단 문제 예시
+{% endembed %}
 
 ### 영역의 개수
 
