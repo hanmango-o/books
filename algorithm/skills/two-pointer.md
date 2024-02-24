@@ -76,7 +76,7 @@ for((1) Left pointer condition) {
         (5) Update right pointer
     }
     (6) Update result in current window
-    (6) Update left position for next window
+    (7) Update left position for next window
 }
 ```
 
