@@ -27,9 +27,9 @@ for(int i = 0; i < W; i++) { // [1] 초기 index = 0 ~ W - 1 까지의 합
     max_sum += arr[i];
 }
 int sum = max_sum; // 현재 영역 요소들의 합
-for(int i = 0; i < N - W; i++) { // [2] 윈도우를 옮기며 진행
-    sum += arr[i + W]; // 맨 뒤 값 갱신
-    sum -= arr[i]; // 맨 앞 값 갱신
+for(int left = 0; left < N - W; left++) { // [2] 윈도우를 옮기며 진행
+    sum += arr[left + W]; // 맨 뒤 값 갱신
+    sum -= arr[left]; // 맨 앞 값 갱신
     max_sum = max(max_sum, sum); // 현재 영역의 합과 기존 최대 합 비교
 }
 cout << max_sum; // N 배열에서 최대 합
@@ -51,7 +51,11 @@ cout << max_sum; // N 배열에서 최대 합
 
 위 예시의 경우 1씩 이동하고 있으므로, 이전 영역에서 맨 앞의 값은 빼주고, 현재 영역에서 추가되는 맨 뒤 값은 더하며 갱신합니다.
 
+{% hint style="warning" %}
+위 예시에서 `max_sum`에 해당하는 index는 `sum > max_sum` 일 경우의 `left + 1` 이 되게 됩니다.
 
+핵심은 `left + 1` 이 해당 인덱스의 시작 지점이라는 것 입니다.
+{% endhint %}
 
 ## Two Pointer
 
