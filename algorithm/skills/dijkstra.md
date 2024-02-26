@@ -38,12 +38,12 @@ void DIKS() {
     
     while(!pq.empty()) {
         int now_node, now_vol;
-        tie(now_node, now_vol) = pq.top();
+        tie(now_vol, now_node) = pq.top();
         pq.pop();
         
         for(int i = 0; i < graph[now_node].size(); i++) { // [4] 그래프 탐색
             int next_node, next_vol;
-            tie(next_node, next_vol) = graph[now_node][i];
+            tie(next_vol, next_node) = graph[now_node][i];
             if(dist[next_node] <= dist[now_node] + next_vol) continue; // [4] 탐색 조건
             dist[next_node] = dist[now_node] + next_vol;
             pq.push(make_pair(next_node, next_vol));
@@ -53,6 +53,12 @@ void DIKS() {
 ```
 
 다익스트라는 [priority-queue.md](priority-queue.md "mention")(우선 순위 큐)를 활용하여 그래프를 탐색합니다.
+
+{% hint style="warning" %}
+우선 순위 큐의 요소는 (간선 가중치, 노드 번호) 형태의 pair가 주로 사용됩니다.
+
+이때, (간선 가중치, 노드 번호)의 순서에 유의하여 값을 할당해야 합니다.
+{% endhint %}
 
 #### \[1] dist 배열
 
