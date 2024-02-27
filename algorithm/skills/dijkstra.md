@@ -46,7 +46,7 @@ void DIKS() {
             tie(next_vol, next_node) = graph[now_node][i];
             if(dist[next_node] <= dist[now_node] + next_vol) continue; // [4] 탐색 조건
             dist[next_node] = dist[now_node] + next_vol;
-            pq.push(make_pair(next_node, next_vol));
+            pq.push(make_pair(dist[next_node], next_node));
         }
     }
 }
@@ -100,7 +100,11 @@ dist 배열의 크기는 전체 노드의 개수만큼 되도록 설정하여 [d
 
 여기서 탐색 조건이란, dist 배열에 기록된 다음 노드의 거리가 dist 배열에 기록된 현재 노드의 거리와 다음 노드의 간선의 크기의 합보다 클 경우를 의미합니다.
 
-즉, `dist[next] > dist[now] + now_vol` 일 경우, `dist[next]를 dist[now] + now_vol` 로 갱신하고 `next` 노드를 우선 순위 큐에 넣어 다음 탐색 노드로 지정하게 됩니다.
+즉, `dist[next] > dist[now] + next_vol` 일 경우, `dist[next]를 dist[now] + next_vol` 로 갱신하고 `next` 노드를 우선 순위 큐에 넣어 다음 탐색 노드로 지정하게 됩니다.
+
+{% hint style="warning" %}
+우선 순위 큐에 넣는 next 노드 정보에 간선의 가중치는 dist\[next] 이여야 합니다.
+{% endhint %}
 
 
 
