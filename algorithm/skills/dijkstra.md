@@ -202,3 +202,24 @@ while(node != START_NODE) {
 앞서 살펴본 인접 리스트를 활용한 그래프 뿐만 아니라, 인접 리스트에서도 다익스트라를 활용할 수 있습니다.
 
 또한, 지도 환경에서도 다익스트라를 활용할 수 있습니다. 이때 [dx-dy.md](dx-dy.md "mention")를 통해 진행하며 지도에서의 최단 거리를 구할 수 있습니다.
+
+```cpp
+void DIKS() {
+    // 기존 다익스트라와 동일
+    
+    while(!pq.empty()) {
+        // 이하 동일
+        for(int i = 0; i < 4; i++) {
+            // dx dy 동일 사용
+            
+            if(dist[newY][newX] > dist[nowY][nowX] + MAP[newY][newX]) {
+                // 기존 그래프의 new_vol(새로운 노드의 간선의 가중치)가 MAP의 값으로 대체됨
+                dist[newY][newX] = dist[nowY][nowX] + MAP[newY][newX];
+                pq.push(...);
+            }
+        }
+    }
+}
+```
+
+여기서 중요한 것은 기존의 new\_vol이 MAP\[y]\[x]로 대체되었다는 것 입니다.
