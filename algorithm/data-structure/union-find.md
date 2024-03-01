@@ -163,7 +163,7 @@ void Union(int a, int b) {
 
 // After Union
 for(int i = 0; i < N; i++) {
-    if(parent[i] == i || DAT[i]) continue; // 단일 원소 집합, 이미 확인한 집합 제외
+    if(parent[i] == i || DAT[parent[i]]) continue; // 단일 원소 집합, 이미 확인한 집합 제외
     DAT[parent[i]] = true;
     cnt++; // 단일 원소 제외 집합 수 + 1
 }
