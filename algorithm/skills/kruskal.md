@@ -1,5 +1,5 @@
 ---
-description: Kruskal 알고리즘에 대해 알아보고, 이를 활용한 문제 해결 방법을 살펴봅니다.
+description: 크루스칼 알고리즘에 대해 알아보고, 이를 활용한 문제 해결 방법을 살펴봅니다.
 ---
 
 # Kruskal
@@ -107,3 +107,10 @@ else cout << -1; // 트리 생성 실패(모든 노드 포함 X)
 
 
 
+
+
+크루스칼 알고리즘은 [dijkstra.md](dijkstra.md "mention")알고리즘과 동일하게 최단 거리를 찾는 알고리즘입니다. 다익스트라와 다른 차이점은 음의 가중치를 가지는 경우에도 사용할 수 있다는 점입니다.
+
+크루스칼 알고리즘은 [union-find.md](../data-structure/union-find.md "mention")와 [sort.md](sort.md "mention")를 활용하여 그래프 내에 존재하는 모든 가중치 정보를 오름차순 정렬하여, 모든 노드가 연결되는 상태를 찾는 방식으로 동작하게 됩니다.
+
+###
