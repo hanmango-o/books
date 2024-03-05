@@ -24,7 +24,7 @@ description: 이진탐색 기법에 대해 알아보고, 이를 활용하는 방
 
 ```cpp
 // target : 찾고자 하는 값, arr : 대상 배열
-int BS(int left, int right) {
+int BS(int left, int right, int target) {
     int mid = 0; // [1] 현재 중앙 인덱스
     
     while(left <= right) { // [2] 남은 영역의 크기가 1이하일 경우 종료
@@ -104,11 +104,11 @@ int LowerBound(int left, int right, int target) {
     int ret = N; // [1] target보다 크거나 같은 첫 번째 요소의 인덱스
     while(left <= right) {
         mid = (left + right) / 2;
-        if(arr[mid] >= target) { // [2] 탐색 범위 및 인덱스 갱신
+        if(arr[mid] < target) { // [2] 탐색 범위 및 인덱스 갱신
+            left = mid + 1;
+        } else {
             right = mid - 1;
             ret = min(ret, mid);
-        } else {
-            left = mid + 1;
         }
     }
     return ret;
@@ -139,17 +139,16 @@ int LowerBound(int left, int right, int target) {
 
 ```cpp
 int UpperBound(int left, int right, int target) {
-    int mid = 0;
-    int ret = N;
+    int mid = 0, ret = N;
     while(left <= right) {
         mid = (left + right) / 2;
-        if(arr[mid] > target) { // [1] 인덱스 갱신
+        if(arr[mid] <= target) left = mid + 1; // [1] 인덱스 갱신
+        else {
             right = mid - 1;
             ret = min(ret, mid);
-        } else {
-            left = mid + 1;
         }
     }
+    return ret;
 }
 ```
 
