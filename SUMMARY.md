@@ -76,3 +76,7 @@
 ## EMBEDED
 
 * [Page 1](embeded/page-1.md)
+
+## CHEAT SHEET
+
+* [Algorithm](cheat-sheet/algorithm.md)
