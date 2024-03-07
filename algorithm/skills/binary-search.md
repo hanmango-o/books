@@ -60,36 +60,6 @@ left와 right를 mid 인덱스로 이동할 경우 target을 안 만나는 인�
 
 위 이진 탐색 코드는 찾고자 하는 값이 있을 경우 해당 인덱스 반환하고, 없을 경우 -1을 반환하게 됩니다.
 
-
-
-### STL 사용
-
-이진 탐색은 이미 C++ 표준 라이브러리에 정의되어 있습니다.
-
-해당 STL은 아래와 같이 사용합니다.
-
-```cpp
-#include <algorithm>
-
-binary_search(first, last, target);
-```
-
-파라미터로 first, last 는 iterator로서, 만약 배열을 대상으로 이진 탐색을 해야 한다면 아래와 같이 사용해야 합니다.
-
-```cpp
-binary_search(arr, arr + N, target);
-```
-
-#### STL 사용 시 주의할 점
-
-이진 탐색 STL은 편리하지만 제한 사항이 있습니다.
-
-STL로 주어진 binary\_search 함수는 **bool 타입을 반환**하게 되며, 해당 값이 있을 경우 true, 없을 경우 false를 반환하게 됩니다.
-
-즉, 찾고자 하는 값의 인덱스를 알아야 하는 경우 [#undefined](binary-search.md#undefined "mention")을 통해 직접 구현해야 합니다.
-
-
-
 ### Lower Bound
 
 만약 찾고자 하는 값이 현재 2개 이상 존재한다면, 동일한 값의 인덱스가 여러 개 존재하기 때문에 단순히 이진 탐색만으로 어떤 인덱스가 나오게 될지 확신할 수 없습니다.
@@ -205,3 +175,82 @@ Custom Bound는 찾고자 하는 값보다 작거나 같은 첫 번째 요소를
 
 
 
+### STL 사용
+
+이진 탐색은 이미 C++ 표준 라이브러리에 정의되어 있습니다.
+
+해당 STL은 아래와 같이 사용합니다.
+
+```cpp
+#include <algorithm>
+
+binary_search(first, last, target);
+upper_bound(first, last, target);
+lower_bound(first, last, target);
+```
+
+파라미터로 first, last 는 iterator로서, 만약 배열을 대상으로 이진 탐색을 해야 한다면 아래와 같이 사용해야 합니다.
+
+```cpp
+binary_search(arr, arr + N, target);
+```
+
+#### STL 사용 시 주의할 점
+
+이진 탐색 STL은 편리하지만 제한 사항이 있습니다.
+
+STL로 주어진 binary\_search 함수는 **bool 타입을 반환**하게 되며, 해당 값이 있을 경우 true, 없을 경우 false를 반환하게 됩니다.
+
+즉, 찾고자 하는 값의 인덱스를 알아야 하는 경우 [#undefined](binary-search.md#undefined "mention")을 통해 직접 구현해야 합니다.
+
+반면 upper\_bound와 lower\_bound 함수는 앞서 구현한 [#lower-bound](binary-search.md#lower-bound "mention"), [#upper-bound](binary-search.md#upper-bound "mention")와 동일하게 동작합니다.
+
+하지만, 반환 값은 해당 값의 주소값이기 때문에 해당 값을 알기 위해서는 아래와 같이 배열의 주소값을 빼주어야 합니다.
+
+```cpp
+upper_bound(arr, arr + N, target) - arr;
+lower_bound(arr, arr + N, target) - arr;
+
+upper_bound(vect.begin(), vect.end(), target) - vect.begin();
+lower_bound(vect.begin(), vect.end(), target) - vect.begin();
+```
+
+
+
+## Parametric Search
+
+***
+
+Parametric Search는 [binary-search.md](binary-search.md "mention")의 응용 탐색 기법입니다.
+
+특정 조건에 대한 결과를 기준으로 true, false 로 나뉘어 탐색이 가능한 경우 parametric search 를 사용합니다.
+
+### Parametic Search 주의할 점
+
+PS는 BS를 활용한 문제 해결 기법이기에 다양한 경우에 사용될 수 있습니다.
+
+이때, 주의해야 하는 점은 Upper, Lower 와 같은 동작 시점을 제어하는 것입니다.
+
+예를 들어 가능한 가장 최대의 값을 찾아야 한다면, 아래와 같이 left 를 이동하며 최대 값을 제어해야 합니다.
+
+```cpp
+int PS(int left, int right, int target) {
+    int mid = 0, ret = 0;
+    while(left <= right) {
+        mid = (left + right) / 2;
+        if(isPossible(mid)) {
+            left = mid + 1;
+            ...
+        }
+    }
+}
+```
+
+이러한 예시에서 중요하게 살펴보아야 하는 것은 구하고자 하는 값이 무엇인가? 입니다. 이러한 탐색 범위 제어는 PS 에서 가장 어려운 부분입니다.
+
+이를 보다 쉽게 생각해보면 아래의 단계를 거치게 됩니다.
+
+1. 구하고자 하는 값을 반환하는 PS 함수를 만들려면 무엇을 기준으로 탐색해야 할까?
+2. 구하고자 하는 값이 최대값인가? 최소값인가?
+3. 최대값이라면, 해당 값보다 같거나 작은 경우 더 큰 값을 찾아야 하기에 left를 제어한다.
+4. 반대로 최소값이면, 해당 값보다 같거나 큰 경우 더 작은 값을 찾아야 하기에 right를 제어한다.
