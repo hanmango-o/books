@@ -12,7 +12,7 @@ description: 투포인터와 슬라이딩 윈도우에 대해 알아보고, 이�
 
 슬라이딩 윈도우 알고리즘이란, 고정된 윈도우(영역)를 옮기며 윈도우 내에 있는 데이터를 활용하여 문제를 해결하는 기법을 말합니다.
 
-<img src="../../.gitbook/assets/file.excalidraw.svg" alt="갱신 시 교집합 영역" class="gitbook-drawing">
+<img src="../../.gitbook/assets/file.excalidraw (2).svg" alt="갱신 시 교집합 영역" class="gitbook-drawing">
 
 이때, 윈도우는 **고정된 크기**를 가지게 되며, 윈도우 이동 시 이전 단계 윈도우와 교집합 영역에 있는 요소들은 공유하고 변동되는 양 끝 요소만 갱신하며 진행되게 됩니다.
 
