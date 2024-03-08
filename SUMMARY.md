@@ -82,7 +82,6 @@
   * [DML](db/sql/dml.md)
   * [DCL](db/sql/dcl.md)
   * [TCL](db/sql/tcl.md)
-  * [NULL](db/sql/null.md)
   * [Join](db/sql/join.md)
   * [Connect by](db/sql/connect-by.md)
   * [Subquery](db/sql/subquery.md)

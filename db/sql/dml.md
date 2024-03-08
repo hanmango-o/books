@@ -143,19 +143,33 @@ SELECT 문은 WHERE 문을 사용하여 조건부 조회가 가능합니다.
 
 WHERE 문이 사용 가능한 조건문은 아래와 같습니다.
 
+#### &#x20;Operator
+
+{% tabs %}
+{% tab title="비교 연산자" %}
 <table><thead><tr><th width="179">비교 연산자</th><th>설명</th></tr></thead><tbody><tr><td>=</td><td>같음(== 가 아님에 주의)</td></tr><tr><td>&#x3C;</td><td>작음</td></tr><tr><td>&#x3C;=</td><td>작거나 같음</td></tr><tr><td>></td><td>큼</td></tr><tr><td>>=</td><td>크거나 같음</td></tr></tbody></table>
+{% endtab %}
 
+{% tab title="부정 비교 연산자" %}
 <table><thead><tr><th width="179">부정 비교 연산자</th><th>설명</th></tr></thead><tbody><tr><td>!=</td><td>같지 않음</td></tr><tr><td>^=</td><td>같지 않음</td></tr><tr><td>&#x3C;></td><td>같지 않음</td></tr><tr><td>NOT 칼럼명 = </td><td>같지 않음</td></tr><tr><td>NOT 칼럼명 ></td><td>크지 않음</td></tr></tbody></table>
+{% endtab %}
 
+{% tab title="논리 연산자" %}
 <table><thead><tr><th width="180">논리 연산자</th><th>설명</th></tr></thead><tbody><tr><td>AND</td><td>조건 모두 참</td></tr><tr><td>OR</td><td>조건 모두 거짓</td></tr><tr><td>NOT</td><td>부정</td></tr></tbody></table>
+{% endtab %}
 
+{% tab title="SQL 연산자" %}
 <table><thead><tr><th width="209">SQL 연산자</th><th>설명</th></tr></thead><tbody><tr><td>LIKE '비교 문자열'</td><td>문자열 비교</td></tr><tr><td>BETWEEN A AND B</td><td>A와 B 사이의 값 조회(A &#x3C;= target &#x3C;= B)</td></tr><tr><td>IN (list)</td><td>OR 연산과 동일, list 값 중 하나만 일치해도  조회</td></tr><tr><td>IS NULL</td><td>NULL 값을 조회</td></tr></tbody></table>
+{% endtab %}
 
+{% tab title="부정 SQL 연산자" %}
 | 부정 SQL 연산자          | 설명             |
 | ------------------- | -------------- |
 | NOT BETWEEN A AND B | A미만 B초과 값 조회   |
 | NOT IN (list)       | list와 불일치하면 조회 |
 | IS NOT NULL         | NULL이 아니면 조회   |
+{% endtab %}
+{% endtabs %}
 
 #### LIKE
 
@@ -163,9 +177,9 @@ LIKE 문을 활용한 와일드 카드를 통해 데이터를 조회할 수 있�
 
 <table><thead><tr><th width="172">와일드 카드</th><th>설명</th></tr></thead><tbody><tr><td>%</td><td>어떤 문자를 포함한 모든 것을 조회</td></tr><tr><td>_</td><td>단일 문자를 의미</td></tr></tbody></table>
 
-만약 망고로 시작하는 모든 문자를 조회하고 싶다면, '망고%' 의 형태로 사용이 가능합니다.
+만약 망고로 시작하는 모든 문자를 조회하고 싶다면, `'망고%'` 의 형태로 사용이 가능합니다.
 
-또한 망과 고 사이에 한글자만 포함된 형태이며 망과 고로 끝나지 않는 문자를 찾는 경우 '%망\_고%' 의 형태로 사용 가능합니다.
+또한 망과 고 사이에 한글자만 포함된 형태이며 망과 고로 끝나지 않는 문자를 찾는 경우 `'%망_고%'` 의 형태로 사용 가능합니다.
 
 #### IN
 
