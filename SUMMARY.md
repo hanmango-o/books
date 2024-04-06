@@ -6,6 +6,10 @@
 
 * [Network](cs/network/README.md)
   * [HTTP](cs/http.md)
+* [Logic Circut](cs/logic-circut.md)
+* [Operating System](cs/operating-system.md)
+* [OOP](cs/oop.md)
+* [Design Pattern](cs/design-pattern.md)
 
 ## Language
 
@@ -91,10 +95,6 @@
   * [Top N Query](db/sql/top-n-query.md)
   * [Pivot & Unpivot](db/sql/pivot-and-unpivot.md)
   * [Regular Expression](db/sql/regular-expression.md)
-
-## EMBEDED
-
-* [Page 1](embeded/page-1.md)
 
 ## CHEAT SHEET
 
